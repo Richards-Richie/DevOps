@@ -106,14 +106,37 @@
                     or enter <a href="https://maven.apache.org/download.cgi">Maven</a>
                     <p>from the files copy the link of '.zip' file</p>
                     <p>in your mobaxterm enter</p>
-                    <li>sudo su -</li>
-                    <li>wget 'link address that you have copied from maven' </li>
-                    <p>a zipped folder will be download</p>
-                    <p>unzip the folder using</p>
-                    <li>unzip 'zipped folder name'</li>
-                    <li>mv 'unzipped folder' maven</li>
-                    <li>find / -name bin</li>
-                    <p></p>
+                    <div>
+                        <li>sudo su -</li>
+                        <li>wget 'link address that you have copied from maven' </li>
+                        <p>a zipped folder will be download</p>
+                        <p>unzip the folder using</p>
+                        <li>unzip 'zipped folder name'</li>
+                        <li>mv 'unzipped folder' maven</li>
+                        <li>find / -name bin</li>
+                        <p>copy the path of jdk upto bin - '/usr/lib/jvm/java-17-amazon-corretto.x86_64 '</p>
+                        <li>cd /usr/lib/jvm/java-17-amazon-corretto.x86_64</li>
+                        <li>chmod -R 777 bin</li>
+                        <li>cpy the path of maven upto bin - '/opt/maven/'</li>
+                        <li>cd /opt/maven/</li>
+                        <li>chmod -R 777 bin</li>
+                        <h6>set enviroment variables for maven</h6>
+                        <li>sudo su -</li>
+                        <li>vi .bash_profile</li>
+                        <li>paste these </li>
+                        <li>M2_HOME=/opt/maven
+                            <br/>
+                            M2=/opt/maven/bin
+                            <br/>
+                            JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto.x86_64
+                            <br/>
+                            PATH=$PATH:$HOME/bin:$M2_HOME:$M2:$JAVA_HOME
+                        </li>
+                        <li>echo .bash_profile</li>
+                        <li>source .bash_proflie</li>
+                        <li>mvn -v</li>
+                    </div>
+                    
                 </li>
                 <li>Enter into your github project repository if not contains any project create a repository with a file in it
                     <p>In your jenkins click on new item at the top left </p>
