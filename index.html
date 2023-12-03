@@ -49,8 +49,90 @@
           </div>
         </div>
       </nav>
-      <div class="container-fluid">
-        ...
-      </div>
+      <hr/>
+      <section class="">
+        <h2>3)</h2>
+        <ol>
+            <li>create aws instance with your </li>
+            <li>name of machine </li>
+            <li>key pair </li>
+            <li>add inbound rules by clicking on edit button placed in network section</li>
+            <li>open your instance and copy the ip address</li>
+            <li>open mobaxterm application and select session from top left </li>
+            <li>give the remote access as ip address</li>
+            <li>specify your user as ec2-user</li>
+            <li>click on advanced ssh</li>
+            <li>give our your key which you have downloaded while creating the instance</li>
+        </ol>
+        <ol>
+            <li>JENKINS INSTALLATION </li>
+            <ul>
+                <li>
+                    enter to root folder 
+                    <h5>sudo su -</h5>
+                </li>
+                <li>
+                    <h5>install jenkins </h5>
+                    <h5>
+                        <a href="https://www.jenkins.io/doc/book/installing/linux/#fedora">jenkins link</a>
+                    </h5>
+                    <li>In the weekly release copy the commands and paste it into your instance  </li>
+                </li>
+                <li>install jdk 17
+                    <h5>
+                        <a href="https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/amazon-linux-install.html">jdk 17</a>
+                    </h5>
+                    <li>
+                        select the option 3 command
+                    </li>
+                </li>
+                <li>
+                    now enable and start jenkins from the 
+                    <a href="https://www.jenkins.io/doc/book/installing/linux/#fedora">jenkins link</a>
+                    and copy the commands 
+                    <br/>
+                    <p>after enabling and starting the jenkins paste your instance ip address:port number that you have given in inbund rules in the url</p>
+                    <p>the jenkins signin page appears</p>
+                    <p>copy the path given in the page which is marked in red colour</p>
+                    <p>open mobaxterm and in your instancec enter  </p>
+                    <h5>vi 'paste your path'</h5>
+                    <p>vi editor will be opened with administrator password copy it and paste it in your sign in of jenkins</p>
+                    <p>click on install plugins </p>
+                    <p>enter your username and password to signup to the jenkins</p>
+                </li>
+                <li>
+                    <h5>Install Maven on your instance</h5>
+                    <p>copy this link  https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.zip </p>
+                    or enter <a href="https://maven.apache.org/download.cgi">Maven</a>
+                    <p>from the files copy the link of '.zip' file</p>
+                    <p>in your mobaxterm enter</p>
+                    <li>sudo su -</li>
+                    <li>wget 'link address that you have copied from maven' </li>
+                    <p>a zipped folder will be download</p>
+                    <p>unzip the folder using</p>
+                    <li>unzip 'zipped folder name'</li>
+                    <li>mv 'unzipped folder' maven</li>
+                    <li>find / -name bin</li>
+                    <p></p>
+                </li>
+                <li>Enter into your github project repository if not contains any project create a repository with a file in it
+                    <p>In your jenkins click on new item at the top left </p>
+                    <p>give the name for the project  and select <span>freestyle project from the dropdown</span></p>
+                    <p>give some description about the project</p>
+                    <p>select github project -2nd option </p>
+                    <p>click on code button present in your github repo which is green in color</p>
+                    <p>copy the link and paste in the project url in jenkins appending "/" at the end</p>
+                    <p>In the source code management section  </p>
+                    <p>for the repository url - give the url copied from code button in github repository</p>
+                    <p>in the 'Repository browser' select github web</p>
+                    <p>give the url wihout '.git'</p>
+
+                </li>
+                
+            
+                
+            </ul>
+        </ol>
+      </section>
 </body>
 </html>
