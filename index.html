@@ -51,7 +51,7 @@
         </nav>
         <hr/>
         <section class="">
-        <h2>3)</h2>
+            
         <ol>
             <li>create aws instance with your </li>
             <li>name of machine </li>
@@ -66,7 +66,48 @@
         </ol>
         
         <ol>
-            <h6>JENKINS INSTALLATION </h6>
+            <div class="text-bg-light mb3">
+                <div class="card-header">JENKINS INSTALLATION </div>
+                <li>
+                    <ul>
+                        <li>
+                            enter to root folder 
+                            <h5>sudo su -</h5>
+                        </li>
+                        <li>
+                            <h5>install jenkins </h5>
+                            <h5>
+                                <a href="https://www.jenkins.io/doc/book/installing/linux/#fedora">jenkins link</a>
+                            </h5>
+                            <li>In the weekly release copy the commands and paste it into your instance  </li>
+                        </li>
+                        <li>install jdk 17
+                            <h5>
+                                <a href="https://docs.aws.amazon.com/corretto/latest/corretto-17-ug/amazon-linux-install.html">jdk 17</a>
+                            </h5>
+                            <li>
+                                select the option 3 command
+                            </li>
+                        </li>
+                        <li>
+                            now enable and start jenkins from the 
+                            <a href="https://www.jenkins.io/doc/book/installing/linux/#fedora">jenkins link</a>
+                            and copy the commands 
+                            <br/>
+                            <p>after enabling and starting the jenkins paste your instance ip address:port number that you have given in inbund rules in the url</p>
+                            <p>the jenkins signin page appears</p>
+                            <p>copy the path given in the page which is marked in red colour</p>
+                            <p>open mobaxterm and in your instancec enter  </p>
+                            <h5>vi 'paste your path'</h5>
+                            <p>vi editor will be opened with administrator password copy it and paste it in your sign in of jenkins</p>
+                            <p>click on install plugins </p>
+                            <p>enter your username and password to signup to the jenkins</p>
+                        </li>
+                    </ul>
+                </li>
+                
+            </div>
+            
             <li>
                 <ul>
                     <li>
@@ -161,7 +202,7 @@
             </li>
         </ol>
         </section>
-        <div class="card border-primary mb-3" >
+        <div class="card text-bg-light mb-3" >
                 <div class="card-header">Eclipse</div>
             <div class="card-body text-primary">
                 <h5 class="card-title">creating java project on eclipse</h5>
